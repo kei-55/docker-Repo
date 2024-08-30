@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ヤクザ組</title>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This is a basic web page.</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')">ホーム</button>
+        <button class="tablinks" onclick="openTab(event, 'Recommend')">おすすめ</button>
+        <button class="tablinks" onclick="openTab(event, 'GameIntro')">ゲーム紹介</button>
+        <button class="tablinks" onclick="openTab(event, 'Strategy')">攻略情報</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+        <h2>ホーム</h2>
+        <p>ホームのコンテンツです。</p>
+    </div>
+
+    <div id="Recommend" class="tabcontent">
+        <h2>おすすめ</h2>
+        <p>おすすめのコンテンツです。</p>
+    </div>
+
+    <div id="GameIntro" class="tabcontent">
+        <h2>ゲーム紹介</h2>
+        <p>ゲーム紹介のコンテンツです。</p>
+    </div>
+
+    <div id="Strategy" class="tabcontent">
+        <h2>攻略情報</h2>
+        <p>攻略情報のコンテンツです。</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
