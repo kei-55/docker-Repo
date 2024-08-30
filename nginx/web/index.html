@@ -1,53 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>ヤクザ組</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>企業のWebページ</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Web Page</h1>
-    <p>This is a basic web page.</p>
+	<header>
+		<div class="container">
+			<h1>企業名</h1>
+			<nav>
+				<ul>
+					<li><a href="#home">ホーム</a></li>
+					<li><a href="#about">会社概要</a></li>
+					<li><a href="#services">サービス</a></li>
+					<li><a href="#contact">お問い合わせ</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Home')">ホーム</button>
-        <button class="tablinks" onclick="openTab(event, 'Recommend')">おすすめ</button>
-        <button class="tablinks" onclick="openTab(event, 'GameIntro')">ゲーム紹介</button>
-        <button class="tablinks" onclick="openTab(event, 'Strategy')">攻略情報</button>
-    </div>
+	<section id="home">
+		<div class="container">
+			<h2>ようこそ</h2>
+			<p>私たちの企業へようこそ。私たちは最高のサービスを提供します。</p>
+		</div>
+	</section>
+	
+	<section id="about">
+		<div class="container">
+			<h2>会社概要</h2>
+			<p>私たちの企業は、革新的なソリューションを提供することに専念しています。</p>
+		</div>
+	</section>
+	
+	<section id="services">
+		<div class="container">
+			<h2>サービス</h2>
+			<p>私たちのサービスは、お客様のニーズに合わせてカスタマイズされています。</p>
+		</div>
+	</section>
+	
+	<section id="contact">
+		<div class="container">
+			<h2>お問い合わせ</h2>
+			<p>ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+		</div>
+	</section>
 
-    <div id="Home" class="tabcontent">
-        <h2>ホーム</h2>
-        <p>ホームのコンテンツです。</p>
-    </div>
-
-    <div id="Recommend" class="tabcontent">
-        <h2>おすすめ</h2>
-        <p>おすすめのコンテンツです。</p>
-    </div>
-
-    <div id="GameIntro" class="tabcontent">
-        <h2>ゲーム紹介</h2>
-        <p>ゲーム紹介のコンテンツです。</p>
-    </div>
-
-    <div id="Strategy" class="tabcontent">
-        <h2>攻略情報</h2>
-        <p>攻略情報のコンテンツです。</p>
-    </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 企業名. All rights reserved.</p>
+		</div>
+	</footer>
 </body>
 </html>
